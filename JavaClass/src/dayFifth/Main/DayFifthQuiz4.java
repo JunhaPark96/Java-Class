@@ -22,8 +22,8 @@ public class DayFifthQuiz4 {
         long tries = scanner.nextLong();
         
         for (int i = 0; i < tries; i++) {
-            double x = new Random().nextDouble(2) - 1;
-            double y = new Random().nextDouble(2) - 1;
+            double x = new Random().nextDouble() * 2 - 1;
+            double y = new Random().nextDouble() * 2 - 1;
 //            System.out.println(x);
             boolean ans = coordinate(x, y);
             if (ans == true) {

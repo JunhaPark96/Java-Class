@@ -26,6 +26,21 @@ public class Hero { // Pascal case + 명사
         sword = new Sword();
     }
     
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getHp() {
+        return hp;
+    }
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+    
+    
+    
     /*
     // 메소드 camel case + 동사
     void attack() {

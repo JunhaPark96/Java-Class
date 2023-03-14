@@ -60,9 +60,31 @@ public class Main {
         // String은 너무 자주 쓰이기에 클래스임에도 불구하고 import할 필요가 없고 new로 객체 생성을 따로 하지 않아도 되게끔 자바에서 제공한다
         char[] chars = {'a', 'b', 'c'};
         String str = new String(chars);*/
-        Cleric clericc = new Cleric("da");
-        Cleric cleric = new Cleric("아서스", 40, 5);
-        System.out.println(cleric.getName() + " " + cleric.getHp() + " " + cleric.mp);
+        
+        Wand wand = new Wand("기본 지팡이", 10.0);
+        Wizard wizard = new Wizard("dddd", 100, 100, wand);
+        
+        // 1. 마법사나 지팡이의 이름은 null 일 수 없고, 반드시 3문자 이상이어야 한다
+        wizard.setName(null);
+        System.out.println(wizard.getName());
+        
+        // 2. 지팡이의 마력은 0.5 이상 100.0 이하여야 한다.
+        wizard.wand.setPower(1000);
+        System.out.println(wizard.wand.getPower());
+        
+        // 3. 마법사의 지팡이는 null 일 수 없다
+        wizard.wand.setName(null);
+        System.out.println(wizard.wand.getName());
+        wizard.getWand().setName(null); // 여기서 예외 발생
+        System.out.println(wizard.getWand().getName());
+        
+        // 4. 마법사의 MP는 0 이상이어야 한다. 
+        wizard.setMp(-1);
+        System.out.println(wizard.getMp());
+        
+        // 5. HP가 음수가 되는 상황에서는 대신 0을 설정 되도록 한다. (에러 아님)
+        wizard.setHp(-1);
+        System.out.println(wizard.getHp());
     }
 
 }
