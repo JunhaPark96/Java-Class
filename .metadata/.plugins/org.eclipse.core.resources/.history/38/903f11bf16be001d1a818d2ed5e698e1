@@ -1,9 +1,0 @@
-package DayFourthMethod;
-
-public class DayFourth {
-
-    public static void main(String[] args) {
-        
-    }
-
-}
