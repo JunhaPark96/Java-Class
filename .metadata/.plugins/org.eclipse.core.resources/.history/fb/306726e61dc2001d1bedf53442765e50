@@ -1,0 +1,7 @@
+package daySeventh;
+
+public class Person {
+    String name;
+    
+    ArrayList<String> names = ArrayList<String>
+}

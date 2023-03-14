@@ -1,0 +1,6 @@
+package daySixth.Game;
+
+public class Sword {
+    String name;
+    int damage;
+}
