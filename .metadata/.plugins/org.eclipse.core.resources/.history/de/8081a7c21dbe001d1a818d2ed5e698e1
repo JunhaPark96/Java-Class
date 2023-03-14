@@ -1,0 +1,21 @@
+package DayFourthMethod;
+
+import java.util.*;
+
+
+public class DayFourth {
+    
+    public static void hello(String name) {
+        System.out.println(name + "씨 Hello");
+    }
+    
+    public static void add(int x, int y) {
+        int result = x + y;
+        System.out.println(x + " + " + y + " = " + result);
+    }
+    
+    public static void main(String[] args) {
+        hello("dada"); // f2 문서보기 , ctrl + space 제안
+    }
+
+}

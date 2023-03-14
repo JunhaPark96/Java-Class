@@ -1,0 +1,23 @@
+package DayFourthMethod;
+
+import java.util.*;
+
+public class DayFourthQuiz4 {
+    
+    public static double calcTriangleArea(double bottom, double height) {
+        double triangleArea = bottom * height / 2;
+        return triangleArea;
+    }
+    
+    public static double calcCircleArea(double radius) {
+        double circleArea = 3.14 * radius * radius;
+        return circleArea;
+    }
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner scanner = new Scanner(System.in);
+        
+    }
+
+}

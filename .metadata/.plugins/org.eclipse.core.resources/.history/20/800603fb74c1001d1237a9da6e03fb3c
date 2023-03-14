@@ -1,0 +1,24 @@
+package infiniteLoop;
+
+import java.util.*;
+
+public class InfiniteLoop6 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner scanner = new Scanner(System.in);
+        int sumVal = 0;
+        int cnt = 0;
+        while (true) {
+            int n = scanner.nextInt();
+            if (n / 10 != 2) {
+                break;
+            }
+            sumVal += n;
+            cnt++;
+        }
+        double avg = (double) sumVal / cnt;
+        System.out.println(avg);
+    }
+
+}

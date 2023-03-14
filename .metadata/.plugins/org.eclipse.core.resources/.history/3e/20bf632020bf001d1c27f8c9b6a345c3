@@ -1,0 +1,33 @@
+package ifInFor;
+
+import java.util.*;
+
+public class IfinFor4 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        // 1 2 0 4 5 0 7 8 0 10 11 0 0 14 0 0 17 0 0 20 0 22 0 0 25 0 0 28 0 0 0 0 0 0 0
+        // 1 2 0 4 5 0 7 8 0 11 0 0 14 0 0 17 0 0 20 0 22 0 0 25 0 0 28 0 0 31 32 0 34 35 
+        // 1 2 0 4 5 0 7 8 0 10 11 0 0 14 0 0 17 0 0 20 0 22 0 0 25 0 0 28 0 0 31 32 0 34 35 
+        for (int i = 1; i < n + 1; i++) {
+
+            if (i <= 10) {
+                if (i == 3 || i == 6 || i == 9 || i % 3 == 0) {
+                    System.out.print(0 + " ");
+
+                } else {
+                    System.out.print(i + " ");
+                }
+            } else if (i > 10) {
+                if (i % 10 == 3 || i % 10 == 6 || i % 10 == 9 || i % 3 == 0) {
+                    System.out.print(0 + " ");
+                } else {
+                    System.out.print(i + " ");
+                }
+            }
+        }
+    }
+
+}

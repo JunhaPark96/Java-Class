@@ -1,0 +1,16 @@
+package satisfiedOne;
+
+import java.util.*;
+
+public class SatisfiedOne1 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner scanner = new Scanner(System.in);
+        int cnt = 0;
+        int a = scanner.nextInt();
+        int a = scanner.nextInt();
+        
+    }
+
+}

@@ -1,0 +1,26 @@
+package satisfiedOne;
+
+import java.util.*;
+
+public class SatisfiedOne2 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        boolean ans = false;
+        
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                ans = !ans;
+                break;      // break를 안걸어주면 ans의 값이 true false 계속 바뀌면서 
+            }
+        }
+        if (ans) {
+            System.out.println("C");
+        } else {
+            System.out.println("N");
+        }
+    }
+
+}

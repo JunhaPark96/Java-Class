@@ -1,0 +1,13 @@
+package dayFifth.Main;
+
+public class DayFifthQuiz3 {
+
+    public static void main(String[] args) {
+        // 전자시계 프로그램을 작성하시오
+        for (int i = 0; i < 13; i ++) {
+            for (int j = 0; j < 60; j ++)
+    
+    }
+    }
+
+}

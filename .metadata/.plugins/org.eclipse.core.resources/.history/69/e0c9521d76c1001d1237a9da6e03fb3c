@@ -1,0 +1,28 @@
+package doNotKnowLoop;
+
+import java.util.*;
+
+public class DoNotKnowLoop1 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner scanner = new Scanner(System.in);
+        int cnt = 0;
+        
+        int n = scanner.nextInt();
+        while (true) {
+            if (n == 1) {
+                break;
+            }
+            if (n % 2 == 0) {
+                n /= 2;
+            } else {
+                n = 3 * n + 1;
+            }
+            cnt++;
+        }
+        
+        System.out.println(cnt);
+    }
+
+}

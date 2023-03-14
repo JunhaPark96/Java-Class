@@ -1,0 +1,17 @@
+package dayFifth.Main;
+
+import dayFifth.Calc.*;
+
+public class DayFourth {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int a = 10;
+        int b = 10;
+
+        int total = CalcLogic.add(a, b);
+        int delta = CalcLogic.minus(a, b);
+        
+        System.out.println(total);
+    }
+}

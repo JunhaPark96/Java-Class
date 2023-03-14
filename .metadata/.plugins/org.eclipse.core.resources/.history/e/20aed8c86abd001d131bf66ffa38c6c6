@@ -1,0 +1,36 @@
+package dayThird;
+
+public class DayThirdQuiz {
+
+    public static void main(String[] args) {
+//        // 1. int형 값을 4개 담을 수 있는 배열 points
+//        int[] points = new int[4];
+//        // 2. double형 값을 5개 담을 수 있는 배열 weights 
+//        double[] weights = new double[5];
+//        // 3. boolean형 값을 3개 담을 수 있는 배열 answers
+//        boolean[] answers = new boolean[3];
+//        // 4. String형 값을 3개 담을 수 있는 배열 names
+//        String[] names = new String[3];
+        
+//        --------------------------------------------------------------------------
+        
+//        // 3개의 계좌 잔액 "121902, 8302, 55100이 담겨 있는 int형 배열 moneyList를 선언하시오
+//        int[] moneyList = {121902, 8302, 55100};
+//        // 그 배열의 요소를 1개씩 for문ㅇ로 꺼내서 화면에 표시하시오
+//        for (int i = 0; i < moneyList.length; i++) {
+//            System.out.println(moneyList[i]);
+//        }
+//        // 같은 배열 요소를 foreach문으로 1개씩 꺼내서 화면에 표시하시오
+//        for (int money : moneyList) {
+//            System.out.println(money);
+//        }
+//        --------------------------------------------------------------------------
+        
+        // 각 라인에서 발생하는 예외의 이름을 답하시오
+        int[] counts = null;
+        float[] heights = { 171.3f, 175.0f};
+        System.out.println(counts[1]); // Null
+//        System.out.println(heights[2]);
+    }
+
+}

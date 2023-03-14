@@ -1,0 +1,17 @@
+package DayFourthMethod;
+
+public class DayFourthQuiz {
+    
+    public static void introduceOneself() {
+        String name = "박준하";
+        int age = 28;
+        double hegiht = 168.0;
+        String gender = "male";
+    }
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        
+    }
+
+}

@@ -1,0 +1,23 @@
+package dayThird;
+
+import java.util.*;
+
+public class DayThirdAlgo {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        String[] names = new String[n];
+        // n번 이름 입력
+        for (int i = 0; i < n; i++) {
+            names[i] = scanner.next();
+
+        }
+        String sumName = String.join(",", names);
+        System.out.println("Hello " + sumName + ".");
+
+        scanner.close();
+    }
+
+}

@@ -1,0 +1,9 @@
+package loop;
+import java.util.*;
+public class WhileLoop1 {
+
+    public static void main(String[] args) {
+        
+    }
+
+}

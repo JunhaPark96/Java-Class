@@ -1,0 +1,6 @@
+package daySixth.Game;
+
+public class Kinoko {
+    int hp;
+    final int LEVEL = 10; // 변하지 않을 
+}

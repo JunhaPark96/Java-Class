@@ -1,0 +1,33 @@
+package dayFifth.Main;
+
+import java.util.*;
+
+public class DayFifthAlgo {
+    public static boolean coordinate(int x, int y) {
+        boolean result = false;
+        double distance = Math.PI * Math.sqrt(x * x + y * y);
+//        System.out.println(distance);
+        if (distance <= Math.PI) {
+            result = !result;
+        }
+        return result;
+    }
+    
+    
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt(); // x좌표
+        int b = scanner.nextInt(); // y좌표
+        int R = scanner.nextInt(); // 소음 거리
+        int N = scanner.nextInt(); // 그늘의 수
+
+        for (int i = 0; i < N; i++) {
+            int x_i = scanner.nextInt(); // 그늘의 x좌표
+            int y_i = scanner.nextInt(); // 그늘의 y좌표
+            
+            
+        }
+    }
+
+}

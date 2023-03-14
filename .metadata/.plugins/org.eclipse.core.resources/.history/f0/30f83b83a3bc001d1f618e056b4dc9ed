@@ -1,0 +1,28 @@
+package daySecond;
+
+public class condloop {
+
+    public static void main(String[] args) {
+        // 변수 weight의 값이 60과 같다
+        int weight;
+        if (weight == 60) {
+            
+        }
+        int age1, age2;
+        // 변수 age1과 age2의 합계를 2배 한 것이 60을 넘는다
+        if (2 * (age1 + age2) > 60) {
+            
+        }
+        int age = 1;
+        // 변수 age가 홀수다
+        if (age % 2 != 0) {
+            
+        }
+        String name = "name";
+        // 변수 name에 저장된 문자열이 "스마트"와 같다
+        if (name.equals("스마트")) {
+            
+        }
+    }
+
+}

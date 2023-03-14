@@ -1,0 +1,22 @@
+package cnt;
+
+import java.util.*;
+/*
+ * if ((a % 4 == 0 && a % 100 != 0) || (a % 400 == 0)){
+            System.out.print("true");
+        } else{
+            System.out.print("false");
+        }
+ */
+public class Cnt4 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        
+        
+
+    }
+
+}

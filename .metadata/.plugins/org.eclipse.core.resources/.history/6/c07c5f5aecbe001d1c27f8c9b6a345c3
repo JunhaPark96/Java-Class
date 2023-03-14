@@ -1,0 +1,11 @@
+package dayFifth.Main;
+
+public class DayFifthQuiz1 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println("3초간 기다림!");
+        System.out.println("끝");
+    }
+
+}
