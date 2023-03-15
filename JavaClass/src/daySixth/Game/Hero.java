@@ -3,15 +3,16 @@ package daySixth.Game;
 public class Hero { // Pascal case + 명사
     // field variable, global variable, member variable, property
     // camel case + 명사
-    String name;
-    int hp;
-    Sword sword;
+    private String name;
+    private int hp;
+    private Sword sword;
     static int money;
     // field variable, global variable, member variable, property
     
     // 기본 생성자 primary constructor
     Hero(){
         this("이름 없음");
+        System.out.println("히어로 생성자");
     }
     // 생성자 오버로드
     Hero(String name){
@@ -26,33 +27,18 @@ public class Hero { // Pascal case + 명사
         sword = new Sword();
     }
     
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public int getHp() {
-        return hp;
-    }
-    public void setHp(int hp) {
-        this.hp = hp;
-    }
-    
-    
-    
-    /*
-    // 메소드 camel case + 동사
-    void attack() {
-        System.out.println(this.name + "는 공격했다");
-        System.out.println("적에게 5포인트의 데미지를 주었다");
-    }
-
     void run() {
         System.out.println(this.name + "는 도망쳤다");
         System.out.println("GAME OVER");
         System.out.println("최종 HP는 " + this.hp + " 입니다");
     }
+    
+    // 메소드 camel case + 동사
+    void attack(Kinoko kinoko) {
+        System.out.println(this.name + "는 공격했다");
+        System.out.println("적에게 5포인트의 데미지를 주었다");
+    }
+
 
     void sit(int sec) {
         this.hp += sec;
@@ -69,5 +55,18 @@ public class Hero { // Pascal case + 명사
     void sleep() {
         this.hp = 100;
         System.out.println(this.name + "는(은) 잠을 자고 회복했다!");
-    }*/
+    }
+    
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getHp() {
+        return hp;
+    }
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
 }

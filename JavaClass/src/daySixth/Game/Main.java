@@ -60,7 +60,7 @@ public class Main {
         // String은 너무 자주 쓰이기에 클래스임에도 불구하고 import할 필요가 없고 new로 객체 생성을 따로 하지 않아도 되게끔 자바에서 제공한다
         char[] chars = {'a', 'b', 'c'};
         String str = new String(chars);*/
-        
+        /*
         Wand wand = new Wand("기본 지팡이", 10.0);
         Wizard wizard = new Wizard("dddd", 100, 100, wand);
         
@@ -84,7 +84,24 @@ public class Main {
         
         // 5. HP가 음수가 되는 상황에서는 대신 0을 설정 되도록 한다. (에러 아님)
         wizard.setHp(-1);
-        System.out.println(wizard.getHp());
+        System.out.println(wizard.getHp());*/
+        
+        Hero hero = new Hero("용사사사");
+        PoisonKinoko poisonKinoko = new PoisonKinoko('A');
+//        System.out.println(poisonKinoko.getSuffix());
+        System.out.println("현재 용사의 체력은 " + hero.getHp());
+        poisonKinoko.attack(hero);
+        System.out.println("현재 용사의 체력은 " + hero.getHp());
+        poisonKinoko.attack(hero);
+        System.out.println("현재 용사의 체력은 " + hero.getHp());
+        poisonKinoko.attack(hero);
+        System.out.println("현재 용사의 체력은 " + hero.getHp());
+        poisonKinoko.attack(hero);
+        System.out.println("현재 용사의 체력은 " + hero.getHp());
+        poisonKinoko.attack(hero);
+        System.out.println("현재 용사의 체력은 " + hero.getHp());
+        poisonKinoko.attack(hero);
+        System.out.println("현재 용사의 체력은 " + hero.getHp());
+        
     }
-
 }
