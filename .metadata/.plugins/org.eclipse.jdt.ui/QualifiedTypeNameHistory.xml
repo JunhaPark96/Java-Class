@@ -5,6 +5,9 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="daySixth.Game.Kinoko"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="daySixth.Game.Item"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="daySixth.Game.TangibleAsset"/>
+    <fullyQualifiedTypeName name="daySixth.Game.Asset"/>
 </qualifiedTypeNameHistroy>

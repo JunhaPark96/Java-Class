@@ -85,10 +85,9 @@ public class Main {
         // 5. HP가 음수가 되는 상황에서는 대신 0을 설정 되도록 한다. (에러 아님)
         wizard.setHp(-1);
         System.out.println(wizard.getHp());*/
-        
+        /*
         Hero hero = new Hero("용사사사");
         PoisonKinoko poisonKinoko = new PoisonKinoko('A');
-//        System.out.println(poisonKinoko.getSuffix());
         System.out.println("현재 용사의 체력은 " + hero.getHp());
         poisonKinoko.attack(hero);
         System.out.println("현재 용사의 체력은 " + hero.getHp());
@@ -101,7 +100,8 @@ public class Main {
         poisonKinoko.attack(hero);
         System.out.println("현재 용사의 체력은 " + hero.getHp());
         poisonKinoko.attack(hero);
-        System.out.println("현재 용사의 체력은 " + hero.getHp());
+        System.out.println("현재 용사의 체력은 " + hero.getHp());*/
+        
         
     }
 }
