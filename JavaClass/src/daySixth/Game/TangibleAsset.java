@@ -1,32 +1,32 @@
 package daySixth.Game;
 
 public abstract class TangibleAsset extends Asset implements Thing {
-    private String name;
-    private int price;
     private String color;
-
+    private double weight;
+    
     public TangibleAsset(String name, int price, String color) {
-        this.name = name;
-        this.price = price;
+        super(name, price);
         this.color = color;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getPrice() {
-        return price;
     }
 
     public String getColor() {
         return color;
     }
+//
+//    public abstract void setWeight();
+//
+//    public abstract double getWeight();
 
-    public abstract void setWeight();
+    @Override
+    public double getWeight() {
+        return weight;
+    }
 
-    public abstract int getWeight();
-
-
+    @Override
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+    
+    
 
 }

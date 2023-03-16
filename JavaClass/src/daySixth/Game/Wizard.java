@@ -1,6 +1,6 @@
 package daySixth.Game;
 
-public class Wizard {
+public class Wizard extends Character{
     private String name;
     private int hp;
     private int mp;
@@ -13,8 +13,7 @@ public class Wizard {
     }
     
     public Wizard(String name, int hp, int mp, Wand wand) {
-        setName(name);
-        setHp(hp);
+        super(name, hp);
         setMp(mp);
         setWand(wand);
     }
@@ -61,6 +60,12 @@ public class Wizard {
 
     public void setWand(Wand wand) {
         this.wand = wand;
+    }
+
+    @Override
+    public void attack(Kinoko kinoko) {
+        // TODO Auto-generated method stub
+        
     }
     
     

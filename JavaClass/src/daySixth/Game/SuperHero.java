@@ -25,8 +25,7 @@ public class SuperHero extends Hero{
     }
     
     @Override
-    void attack(Kinoko kinoko) {
-        // TODO Auto-generated method stub
+    public void attack(Kinoko kinoko) {
         super.attack(kinoko);
         if (this.flying) {
             System.out.println(this.getName() + "의 공격");

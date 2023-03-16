@@ -2,7 +2,7 @@ package daySixth.Game;
 
 public class Book extends TangibleAsset{
     private String isbn;
-    private int weight;
+    private double weight;
     
     public Book(String name, int price, String color, String isbn) {
         super(name, price, color);
@@ -14,17 +14,13 @@ public class Book extends TangibleAsset{
     }
 
     @Override
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
     
     @Override
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    @Override
-    public void setWeight() {
-        
-    }
 }

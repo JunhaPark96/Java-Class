@@ -101,7 +101,8 @@ public class Main {
         System.out.println("현재 용사의 체력은 " + hero.getHp());
         poisonKinoko.attack(hero);
         System.out.println("현재 용사의 체력은 " + hero.getHp());*/
-        
-        
+        Wand wand = new Wand("afaf", 10);
+        Character character = new Wizard("dadadda", 100, 10, wand);
+        Hero hero = (Hero) character;
     }
 }

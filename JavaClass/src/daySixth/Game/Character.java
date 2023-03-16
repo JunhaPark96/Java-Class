@@ -10,6 +10,12 @@ public abstract class Character {
         hp = 100;
     }
     
+    public Character(String name, int hp) {
+        this.name = name;
+        hp = 100;
+    }
+    
+    
     public abstract void attack(Kinoko kinoko);
     
     public String getName() {
