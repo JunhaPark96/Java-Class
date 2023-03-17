@@ -30,6 +30,13 @@ public class Book implements Comparable<Book>, Cloneable{
         Book other = (Book) obj;
         return Objects.equals(publishDate, other.publishDate) && Objects.equals(title, other.title);
     }
+    
+//    public Book clone() throws CloneNotSupportedException {
+//        super.clone();
+//        
+//        return book;
+//    }
+    
     @Override
     public Book clone() {
         Book copyBook = new Book(comment, publishDate, comment);
@@ -70,6 +77,8 @@ public class Book implements Comparable<Book>, Cloneable{
     public void setComment(String comment) {
         this.comment = comment;
     }
+    
+    
     
     
 }

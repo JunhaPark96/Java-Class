@@ -2,7 +2,7 @@ package dayNineth;
 
 import java.util.*;
 
-public class Student implements Comparable<Student>{
+public class Student implements Comparable<Student>, Comparator<Student>{
     private String name;
     private int id;
     
@@ -58,6 +58,9 @@ public class Student implements Comparable<Student>{
     public int compareTo(Student o) {
         return this.name.compareTo(o.name);
     }
-    
-    
+
+    @Override
+    public int compare(Student o1, Student o2) {
+        return Integer.compare(o1.id, o2.id);
+    }
 }
