@@ -38,8 +38,8 @@ public class StrongBox<T> {
 
     public StrongBoxLock get() {
         this.lockTries--;
+        this.i++;
         if (lockTries < 0) {
-            this.i++;
             System.out.print(i + " ");
             return this.strongBoxLock;
         } else {
