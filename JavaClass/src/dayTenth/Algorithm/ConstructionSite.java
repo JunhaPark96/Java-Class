@@ -5,6 +5,7 @@ import java.util.*;
 public class ConstructionSite<T extends Location> {
     private T location;
     private int noiseLevel;
+    private Coordinate coordinate;
     
     
     public ConstructionSite(T location, int noiseLevel) {
@@ -26,6 +27,32 @@ public class ConstructionSite<T extends Location> {
     
     public void setNoiseLevel(int noiseLevel) {
         this.noiseLevel = noiseLevel;
+    }
+    
+    public Coordinate getCoordinate() {
+        return coordinate;
+    }
+    
+    @Override
+    public String toString() {
+        return "ConstructionSite [location=" + location + ", noiseLevel=" + noiseLevel + "]";
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(location, noiseLevel);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        ConstructionSite other = (ConstructionSite) obj;
+        return Objects.equals(location, other.location) && noiseLevel == other.noiseLevel;
     }
     
 //    public double calculateDistance(T location) {
