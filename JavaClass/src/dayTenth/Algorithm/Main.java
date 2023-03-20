@@ -1,11 +1,18 @@
 package dayTenth.Algorithm;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-import java.util.*;
 
 public class Main {
+    public static void some() throws ArithmeticException {
+
+    }
+
     public static void main(String[] args) {
+
+        some();
+
         Scanner scanner = new Scanner(System.in);
 
         int x = scanner.nextInt(); // 공사장 x 좌표
@@ -16,15 +23,15 @@ public class Main {
         //  주의. ConstructionSite의 타입을 Location으로 정의하였기 때문에, Coordinate는 Location을 구현해야함
         
         int n = scanner.nextInt(); // 나무 갯수
-        List<Tree<Location>> trees = new ArrayList<>();
+        List<Tree> trees = new ArrayList<>();
         //  Tree 객체를 원소로 갖는 리스트, 각 Tree 객체는 Location 객체를 원소로 가짐
-        
+
         for (int i = 0; i < n; i++) {
             int treeX = scanner.nextInt();
             int treeY = scanner.nextInt();
-            trees.add(new Tree<>(new Coordinate(treeX, treeY))); // x, y좌표를 갖는 Tree객체리스트에 trees add
+            trees.add(new Tree(new Coordinate(treeX, treeY))); // x, y좌표를 갖는 Tree객체리스트에 trees add
         }
-        NoiseDetector<Tree<Location>> noiseDetector = new NoiseDetector<>(trees, constructionSite);
+        NoiseDetector noiseDetector = new NoiseDetector(trees, constructionSite);
         // Location을 상속한 Tree
         // Tree와 constructionSite가 Location을 상속하는 제네릭 클래스이기 때문에 역시 noiseDetector의 제네릭타입도 Location으로 제한
         

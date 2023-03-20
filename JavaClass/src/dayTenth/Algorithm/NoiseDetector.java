@@ -2,19 +2,19 @@ package dayTenth.Algorithm;
 
 import java.util.*;
 
-public class NoiseDetector<T extends Location> {
-    private List<T> locations;
+public class NoiseDetector {
+    private List<Tree> locations;
 //    private Location constructionSiteLocation;
     private ConstructionSite<Location> constructionSite;
     
-    public NoiseDetector(List<T> locations, ConstructionSite<Location> constructionSite) {
+    public NoiseDetector(List<Tree> locations, ConstructionSite<Location> constructionSite) {
         this.locations = locations;
         this.constructionSite = constructionSite;
     }
     
     public void detectNoise() {
-        for (T location : locations) {
-            if (isNoisy(location)) {
+        for (Tree tree : locations) {
+            if (isNoisy(tree.getLocation())) {
                 System.out.println("noisy");
             } else {
                 System.out.println("silent");
@@ -23,7 +23,7 @@ public class NoiseDetector<T extends Location> {
     }
     
     // 거리 계산
-    private class DistanceCalculator {
+    private static class DistanceCalculator {
         public double calculateDistance(Location location1, Location location2) {
             int x1 = location1.getX();
             int y1 = location2.getY();
@@ -33,7 +33,7 @@ public class NoiseDetector<T extends Location> {
         }
     }
     // 판별
-    private boolean isNoisy(T location) {
+    private boolean isNoisy(Location location) {
         DistanceCalculator calculator = new DistanceCalculator();
         double distance = calculator.calculateDistance(constructionSite.getLocation(), location);
         return distance <= constructionSite.getNoiseLevel();
