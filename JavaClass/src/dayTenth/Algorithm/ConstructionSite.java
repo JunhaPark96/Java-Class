@@ -5,7 +5,7 @@ import java.util.*;
 public class ConstructionSite<T extends Location> {
     private T location;
     private int noiseLevel;
-    private Coordinate coordinate;
+//    private Coordinate coordinate;
     
     
     public ConstructionSite(T location, int noiseLevel) {
@@ -29,9 +29,9 @@ public class ConstructionSite<T extends Location> {
         this.noiseLevel = noiseLevel;
     }
     
-    public Coordinate getCoordinate() {
-        return coordinate;
-    }
+//    public Coordinate getCoordinate() {
+//        return coordinate;
+//    }
     
     @Override
     public String toString() {

@@ -6,10 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Location"/>
+		<item key="selection" value="money"/>
 		<list key="findhistory">
-			<item value="Location"/>
 			<item value="money"/>
+			<item value="Location"/>
 			<item value="comparable"/>
 			<item value="package loop;"/>
 		</list>
