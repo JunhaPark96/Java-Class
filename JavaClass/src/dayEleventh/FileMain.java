@@ -25,7 +25,7 @@ public class FileMain {
         
         File file = new File("C:\\Users\\JUNHA\\eclipse-workspace\\JavaClass\\FilePrac.txt");
         File zipFile =
-                new File("C:\\Users\\JUNHA\\eclipse-workspace\\JavaClass\\FilePracCopy.txt.zip");
+                new File("C:\\Users\\JUNHA\\eclipse-workspace\\JavaClass\\FilePracCopy.zip");
         
         try (
             FileInputStream fis = new FileInputStream(file);
