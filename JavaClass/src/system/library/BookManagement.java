@@ -1,11 +1,15 @@
 package system.library;
 
+import java.util.*;
+
 public interface BookManagement {
-    void bookList();
-    
-    void borrowBook();
-    
+    void showBookList();
+
     void dueDateExtend();
-    
+
     void addBook();
+
+    void removeBook(Book book);
+
+    void borrowBook();
 }

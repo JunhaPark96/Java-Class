@@ -17,15 +17,17 @@ public class BookView {
             }
             if (choice == 1) {
                 System.out.println("대출 가능한 도서 목록입니다");
-                bookImpl.bookList();
+                bookImpl.showBookList();
             } else if (choice == 2) {
+                System.out.println("대출할 도서 번호를 입력하세요");
                 bookImpl.borrowBook();
             } else if (choice == 3) {
+                System.out.print("대출 연장할 도서 번호를 입력하세요");
                 bookImpl.dueDateExtend();
             } else if (choice == 4) {
                 bookImpl.addBook();
             } else {
-                System.out.println("0 ~ 3사이의 숫자를 입력해 주세요");
+                System.out.println("0 ~ 4사이의 숫자를 입력해 주세요");
             }
         }
 

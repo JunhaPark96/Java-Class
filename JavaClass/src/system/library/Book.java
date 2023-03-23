@@ -61,7 +61,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "책정보 출판날짜: " + publishDate + ", 책이름: " + name + "저자: " + author
+        return "책정보 출판날짜: " + publishDate + ", 책이름: " + name + ", 저자: " + author
                 + ", isbn: " + isbn;
     }
 

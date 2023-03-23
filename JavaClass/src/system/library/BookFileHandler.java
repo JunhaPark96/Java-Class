@@ -41,5 +41,17 @@ public class BookFileHandler {
         }
     }
     
+    public static void csvDeletedWriter(List<Book> bookList, String fileName) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName, true))) {
+            
+            for (Book book : bookList) {
+                bw.write(book.getPublishDate() + "," + book.getName() + "," + book.getAuthor() + ","
+                        + book.getIsbn());
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     
 }
