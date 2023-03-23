@@ -1,25 +1,29 @@
-package system.book;
+package system.library;
 
 import java.util.*;
 
-public class BookInfo {
-    private Calendar publishDate;
+public class Book {
+    private String publishDate;
     private String name;
     private String author;
     private String isbn;
+    private boolean isCheckedOut;
     
-    public BookInfo(Calendar publishDate, String name, String author, String isbn) {
+    public Book(String publishDate, String name, String author, String isbn, boolean isCheckedOut) {
         this.publishDate = publishDate;
         this.name = name;
         this.author = author;
         this.isbn = isbn;
+        this.isCheckedOut = isCheckedOut;
     }
+    
+    public Book() {}
 
-    public Calendar getPublishDate() {
+    public String getPublishDate() {
         return publishDate;
     }
 
-    public void setPublishDate(Calendar publishDate) {
+    public void setPublishDate(String publishDate) {
         this.publishDate = publishDate;
     }
 
@@ -47,10 +51,18 @@ public class BookInfo {
         this.isbn = isbn;
     }
 
+    public boolean isCheckedOut() {
+        return isCheckedOut;
+    }
+
+    public void isCheckedOut(boolean isCheckedOut) {
+        this.isCheckedOut = isCheckedOut;
+    }
+
     @Override
     public String toString() {
-        return "BookInfo [publishDate=" + publishDate + ", name=" + name + ", author=" + author
-                + ", isbn=" + isbn + "]";
+        return "책정보 출판날짜: " + publishDate + ", 책이름: " + name + "저자: " + author
+                + ", isbn: " + isbn;
     }
 
     @Override
@@ -66,7 +78,7 @@ public class BookInfo {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        BookInfo other = (BookInfo) obj;
+        Book other = (Book) obj;
         return Objects.equals(author, other.author) && Objects.equals(isbn, other.isbn)
                 && Objects.equals(name, other.name)
                 && Objects.equals(publishDate, other.publishDate);
