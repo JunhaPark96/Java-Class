@@ -24,7 +24,6 @@
     <fullyQualifiedTypeName name="java.util.zip.GZIPOutputStream"/>
     <fullyQualifiedTypeName name="java.util.function.IntBinaryOperator"/>
     <fullyQualifiedTypeName name="java.util.function.Predicate"/>
-    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="java.net.URL"/>
     <fullyQualifiedTypeName name="dayTwelve.CounterInterface"/>
     <fullyQualifiedTypeName name="java.lang.Runnable"/>
@@ -47,4 +46,7 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="system.user.UserImpl"/>
     <fullyQualifiedTypeName name="system.library.UserView"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="library.refactor.domain.User"/>
+    <fullyQualifiedTypeName name="library.refactor.repository.UserRepository"/>
 </qualifiedTypeNameHistroy>
