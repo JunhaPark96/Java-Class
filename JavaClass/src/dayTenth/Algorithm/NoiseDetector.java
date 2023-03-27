@@ -23,6 +23,8 @@ public class NoiseDetector {
     }
     
     // 거리 계산
+
+    // static 붙여주자. 순환의 오류가 생길 수 있다
     private static class DistanceCalculator {
         public double calculateDistance(Location location1, Location location2) {
             int x1 = location1.getX();

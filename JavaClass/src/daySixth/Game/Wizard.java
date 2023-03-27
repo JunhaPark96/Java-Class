@@ -1,6 +1,9 @@
 package daySixth.Game;
 
-public class Wizard extends Character{
+import java.io.*;
+
+public class Wizard extends Character implements Serializable{
+    private static final long serialVersionUID = 1L;
     private String name;
     private int hp;
     private int mp;

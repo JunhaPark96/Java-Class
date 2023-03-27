@@ -19,6 +19,7 @@ public class Cleric {
     
     public void setName(String name) {
         this.name = name;
+        assert name.length() > 3;
     }
     
     public int getHp() {
