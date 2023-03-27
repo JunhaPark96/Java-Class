@@ -2,47 +2,21 @@ package dayTenth.Algorithm;
 
 import java.util.*;
 
-public class Tree<T extends Location> implements Location{
-    private T location;
+public class Tree {
+    private Location location;
 
-
-    public Tree(T location) {
+    public Tree(Location location) {
         this.location = location;
     }
 
-
-    public T getLocation() {
+    public Location getLocation() {
         return location;
-    }
-
-    public void setLocation(T location) {
-        this.location = location;
-    }
-    @Override
-    public int getX() {
-        return location.getX();
-    }
-
-    @Override
-    public void setX(int x) {
-        location.setX(x);
-    }
-
-    @Override
-    public int getY() {
-        return location.getY();
-    }
-
-    @Override
-    public void setY(int y) {
-        location.setY(y);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(location);
     }
-
 
     @Override
     public boolean equals(Object obj) {
@@ -61,7 +35,6 @@ public class Tree<T extends Location> implements Location{
     public String toString() {
         return "Tree [location=" + location + "]";
     }
-
 
 
 }
