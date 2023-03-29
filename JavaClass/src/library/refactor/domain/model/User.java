@@ -1,5 +1,6 @@
 package library.refactor.domain.model;
 
+import java.time.*;
 import java.util.*;
 
 public class User {
@@ -9,10 +10,12 @@ public class User {
     private String name;
     private String address;
     private String number;
-    private Date birthDate;
-    private Date joinDate;
+    private LocalDate birthDate;
+    private LocalDate joinDate;
+    
+    
     public User(int id, String name, int gender, int age, String address, String number,
-            Date birthDate, Date joinDate) {
+            LocalDate birthDate, LocalDate joinDate) {
         this.id = id;
         this.name = name;
         this.gender = gender;
@@ -22,19 +25,31 @@ public class User {
         this.birthDate = birthDate;
         this.joinDate = joinDate;
     }
+    
+    public User(String name) {
+        this.id = id;
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.address = address;
+        this.number = number;
+        this.birthDate = birthDate;
+        this.joinDate = joinDate;
+    }
+    
     public int getId() {
         return id;
     }
-    public Date getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
-    public Date getJoinDate() {
+    public LocalDate getJoinDate() {
         return joinDate;
     }
-    public void setJoinDate(Date joinDate) {
+    public void setJoinDate(LocalDate joinDate) {
         this.joinDate = joinDate;
     }
     public void setId(int id) {

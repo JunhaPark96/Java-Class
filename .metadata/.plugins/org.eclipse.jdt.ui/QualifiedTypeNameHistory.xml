@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="daySixth.Game.Item"/>
     <fullyQualifiedTypeName name="daySixth.Game.TangibleAsset"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="daySixth.Game.Asset"/>
@@ -49,4 +48,7 @@
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="library.refactor.domain.User"/>
     <fullyQualifiedTypeName name="library.refactor.repository.UserRepository"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="library.refactor.domain.repository.UserRepository"/>
+    <fullyQualifiedTypeName name="library.refactor.domain.model.User"/>
 </qualifiedTypeNameHistroy>
