@@ -81,9 +81,9 @@ public class Book {
     }
     @Override
     public String toString() {
-        return "Book [id=" + id + ", title=" + title + ", author=" + author + ", publisher="
-                + publisher + ", publishedDate=" + publishedDate + ", registrationDate="
-                + registrationDate + "]";
+        return "Book id: " + id + ", 제목: " + title + ", 저자: " + author + ", 출판사: "
+                + publisher + ", 출판일: " + publishedDate + ", 등록일: "
+                + registrationDate;
     }
     
     
