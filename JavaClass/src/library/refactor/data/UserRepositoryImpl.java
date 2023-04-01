@@ -8,6 +8,13 @@ public class UserRepositoryImpl implements UserRepository {
     private DataDAO<User> data;
     private List<User> users = new ArrayList<>();
 
+    public UserRepositoryImpl() {
+
+    }
+
+    public UserRepositoryImpl(DataDAO<User> data) {
+        this.data = data;
+    }
 
     @Override
     public void addUser(User user) {
@@ -19,22 +26,46 @@ public class UserRepositoryImpl implements UserRepository {
                 break;
             }
         }
-        if (data != null) {
-            data.save(users);
+        
+        if (index == -1) {
+            users.add(user);
+            if (data != null) {
+                data.save(users);
+            }
+        } else {
+            users.set(index, user);
+            if (data != null) {
+                data.save(users);
+            }
         }
-
+        
     }
 
     @Override
     public void updateUser(User user) {
-        // TODO Auto-generated method stub
-
+        int index = 0;
+        for (int i = 0; i < users.size(); i++) {
+            User e = users.get(i);
+            if (e.getId() == user.getId()) {
+                index = i;
+                break;
+            }
+        }
+        
+        if (index != -1) {
+            users.set(index, user);
+            if (data != null) {
+                data.save(users);
+            }
+        }
     }
 
     @Override
     public void deleteUser(User user) {
-        // TODO Auto-generated method stub
-
+        users.remove(user);
+        if (data != null) {
+            data.save(users);
+        }
     }
 
     @Override

@@ -1,11 +1,11 @@
 package library.refactor.domain.model;
 
 import java.time.*;
-import java.util.*;
+import java.util.concurrent.atomic.*;
 
 public class User {
+    private static AtomicInteger ID_GENERATOR = new AtomicInteger(1);
     private int id;
-    private int gender;
     private int age;
     private String name;
     private String address;
@@ -14,11 +14,10 @@ public class User {
     private LocalDate joinDate;
     
     
-    public User(int id, String name, int gender, int age, String address, String number,
+    public User(String name,  int age, String address, String number,
             LocalDate birthDate, LocalDate joinDate) {
-        this.id = id;
+        this.id = ID_GENERATOR.getAndIncrement();
         this.name = name;
-        this.gender = gender;
         this.age = age;
         this.address = address;
         this.number = number;
@@ -27,9 +26,8 @@ public class User {
     }
     
     public User(String name) {
-        this.id = id;
+        this.id = ID_GENERATOR.getAndIncrement();;
         this.name = name;
-        this.gender = gender;
         this.age = age;
         this.address = address;
         this.number = number;
@@ -61,12 +59,6 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
-    public int getGender() {
-        return gender;
-    }
-    public void setGender(int gender) {
-        this.gender = gender;
-    }
     public int getAge() {
         return age;
     }
@@ -84,9 +76,9 @@ public class User {
     }
     @Override
     public String toString() {
-        return "User [id=" + id + ", gender=" + gender + ", age=" + age + ", name=" + name
-                + ", address=" + address + ", number=" + number + ", birthDate=" + birthDate
-                + ", joinDate=" + joinDate + "]";
+        return "유저 id: " + id + ", 이름: " + name + ", 나이: " + age
+                + ", 주소: " + address + ", 전화번호: " + number + ", 생일: " + birthDate
+                + ", 가입날짜: " + joinDate;
     }
     public void setNumber(String number) {
         this.number = number;

@@ -19,7 +19,6 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="dayTenth.Algorithm.Location"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.util.zip.GZIPOutputStream"/>
     <fullyQualifiedTypeName name="java.util.function.IntBinaryOperator"/>
     <fullyQualifiedTypeName name="java.util.function.Predicate"/>
@@ -48,7 +47,9 @@
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="library.refactor.domain.User"/>
     <fullyQualifiedTypeName name="library.refactor.repository.UserRepository"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="library.refactor.domain.repository.UserRepository"/>
     <fullyQualifiedTypeName name="library.refactor.domain.model.User"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
 </qualifiedTypeNameHistroy>

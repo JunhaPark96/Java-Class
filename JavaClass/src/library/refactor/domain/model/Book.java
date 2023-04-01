@@ -1,19 +1,22 @@
 package library.refactor.domain.model;
 
+import java.time.*;
 import java.util.*;
+import java.util.concurrent.atomic.*;
 
 public class Book {
     // id, title, author, publisher, publishDate, registrationDate 필드, getter setter 생성
+    private static AtomicInteger ID_GENERATOR = new AtomicInteger(1);
     private int id;
     private String title;
     private String author;
     private String publisher;
-    private Date publishedDate;
-    private Date registrationDate;
+    private LocalDate publishedDate;
+    private LocalDate registrationDate;
     
-    public Book(int id, String title, String author, String publisher, Date publishedDate,
-            Date registrationDate) {
-        this.id = id;
+    public Book(String title, String author, String publisher, LocalDate publishedDate,
+            LocalDate registrationDate) {
+        this.id = ID_GENERATOR.getAndIncrement();;
         this.title = title;
         this.author = author;
         this.publisher = publisher;
@@ -45,16 +48,16 @@ public class Book {
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
-    public Date getPublishedDate() {
+    public LocalDate getPublishedDate() {
         return publishedDate;
     }
-    public void setPublishedDate(Date publishedDate) {
+    public void setPublishedDate(LocalDate publishedDate) {
         this.publishedDate = publishedDate;
     }
-    public Date getRegistrationDate() {
+    public LocalDate getRegistrationDate() {
         return registrationDate;
     }
-    public void setRegistrationDate(Date registrationDate) {
+    public void setRegistrationDate(LocalDate registrationDate) {
         this.registrationDate = registrationDate;
     }
     @Override

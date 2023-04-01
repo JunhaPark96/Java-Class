@@ -21,6 +21,8 @@ public class Main {
                 userController.printMenu();
             } else if (target == 3) {
                 System.exit(0);
+            } else {
+                System.out.println("다시 입력하세요");
             }
         }
     }
