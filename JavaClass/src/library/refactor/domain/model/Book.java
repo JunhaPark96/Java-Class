@@ -13,6 +13,8 @@ public class Book {
     private String publisher;
     private LocalDate publishedDate;
     private LocalDate registrationDate;
+    private LocalDate dueDate;
+    private boolean isExtended = false;
     private boolean isBorrowed = false;
     
     public Book(String title, String author, String publisher, LocalDate publishedDate,
@@ -23,9 +25,35 @@ public class Book {
         this.publisher = publisher;
         this.publishedDate = publishedDate;
         this.registrationDate = registrationDate;
+        this.dueDate = dueDate;
         this.isBorrowed = isBorrowed;
+        this.isExtended = isExtended;
     }
     
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+    
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
+    }
+    
+    public boolean isExtended() {
+        return isExtended;
+    }
+    
+    public void setExtended(boolean isExtended) {
+        this.isExtended = isExtended;
+    }
+
+    public boolean isBorrowed() {
+        return isBorrowed;
+    }
+
+    public void setBorrowed(boolean isBorrowed) {
+        this.isBorrowed = isBorrowed;
+    }
+
     public int getId() {
         return id;
     }
@@ -85,7 +113,8 @@ public class Book {
     public String toString() {
         return "Book id: " + id + ", 제목: " + title + ", 저자: " + author + ", 출판사: "
                 + publisher + ", 출판일: " + publishedDate + ", 등록일: "
-                + registrationDate;
+                + registrationDate + ", 대출여부: " + isBorrowed + 
+                ", 반납날짜: " + dueDate;
     }
     
     

@@ -34,15 +34,54 @@ public class BookController {
     }
     
     public void showBookList() {
-        System.out.println(bookRepository.findAll());
+        List<Book> bookList = bookRepository.findAll();
+        Book book = null;
+        for (Book e : bookList) {
+            if(e.isBorrowed() == false) {
+                System.out.println(e);
+            }
+        }
     }
     
     public void borrowBook() {
-        
+        int bookId = bookId();
+        List<Book> bookList = bookRepository.findAll();
+        Book book = null;
+        for (Book e : bookList) {
+            if(e.getId() == bookId) {
+                book = e;
+                break;
+            }
+        }
+        if (book != null && book.isBorrowed() == false) {
+            bookRepository.borrowBook(book);
+            System.out.println(book.getTitle() + "이(가) 대출되었습니다");
+        } else if (book.isBorrowed() == true) {
+            System.out.println("해당 도서는 대출 중입니다");
+        } else {
+            System.out.println("해당 도서가 존재하지 않습니다");
+        }
+        System.out.println(book.toString());
     }
     
     public void dueDateExtend() {
+        int bookId = bookId();
+        List<Book> bookList = bookRepository.findAll();
+        Book book = null;
+        for (Book e : bookList) {
+            if(e.getId() == bookId) {
+                book = e;
+                break;
+            }
+        }
         
+        if (book != null && book.isExtended() == false) {
+            bookRepository.dueDateExtend(book);
+            System.out.println(book.getTitle() + "이(가) 1주일 연장되었습니다");
+        } else {
+            System.out.println("해당 도서는 대출연장할 수 없습니다");
+        }
+        System.out.println(book.toString());
     }
     
     public void addBook() {
@@ -60,4 +99,16 @@ public class BookController {
         bookRepository.addBook(new Book(name, author, publisher, publishedDay, registrationDay));
         System.out.println(bookRepository.findAll());
     }
+    
+    public String bookTitle() {
+        System.out.println("대출하려는 도서 제목을 입력해주세요");
+        return scanner.next();
+    }
+    
+    public int bookId() {
+        System.out.println("대출하려는 도서 ID를 입력해주세요");
+        return scanner.nextInt();
+    }
+    
+    
 }

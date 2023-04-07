@@ -10,9 +10,13 @@ public interface BookRepository {
     
     int deleteBook(int id);
     
-    void borrowBook();
+    void borrowBook(Book book);
     
-    void dueDateExtend();
+    void dueDateExtend(Book book);
+    
+    Book findByTitle(String title);
+    
+    Book findById(int id);
     
     List<Book> findAll();
 }
