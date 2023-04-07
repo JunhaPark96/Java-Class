@@ -1,6 +1,8 @@
 package library.refactor.presentation;
 
+import java.time.*;
 import java.util.*;
+import library.refactor.domain.model.*;
 import library.refactor.domain.repository.*;
 
 public class BookController {
@@ -32,7 +34,7 @@ public class BookController {
     }
     
     public void showBookList() {
-        
+        System.out.println(bookRepository.findAll());
     }
     
     public void borrowBook() {
@@ -44,6 +46,18 @@ public class BookController {
     }
     
     public void addBook() {
+        System.out.println("이름을 입력하세요");
+        String name = scanner.next();
+        System.out.println("저자를 입력하세요");
+        String author = scanner.next();
+        System.out.println("출판사를 입력하세요");
+        String publisher = scanner.next();
+        System.out.println("출판일을 입력하세요 (YYYY-MM-DD)");
+        String publishedDate = scanner.next();
+        LocalDate publishedDay = LocalDate.parse(publishedDate);
+        LocalDate registrationDay = LocalDate.now();
         
+        bookRepository.addBook(new Book(name, author, publisher, publishedDay, registrationDay));
+        System.out.println(bookRepository.findAll());
     }
 }

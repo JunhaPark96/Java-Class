@@ -16,7 +16,6 @@
     <fullyQualifiedTypeName name="dayTenth.Algorithm.ConstructionSite"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.awt.Point"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="dayTenth.Algorithm.Location"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.util.zip.GZIPOutputStream"/>
@@ -52,4 +51,8 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="library.refactor.data.DataDAO"/>
+    <fullyQualifiedTypeName name="library.refactor.domain.repository.BookRepository"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="library.refactor.domain.model.Book"/>
 </qualifiedTypeNameHistroy>

@@ -1,6 +1,7 @@
 package library.refactor.domain.model;
 
 import java.time.*;
+import java.util.*;
 import java.util.concurrent.atomic.*;
 
 public class User {
@@ -82,6 +83,26 @@ public class User {
     }
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(address, age, birthDate, id, joinDate, name, number);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        User other = (User) obj;
+        return Objects.equals(address, other.address) && age == other.age
+                && Objects.equals(birthDate, other.birthDate) && id == other.id
+                && Objects.equals(joinDate, other.joinDate) && Objects.equals(name, other.name)
+                && Objects.equals(number, other.number);
     }
     
     

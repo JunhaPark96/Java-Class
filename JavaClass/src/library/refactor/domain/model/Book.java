@@ -13,6 +13,7 @@ public class Book {
     private String publisher;
     private LocalDate publishedDate;
     private LocalDate registrationDate;
+    private boolean isBorrowed = false;
     
     public Book(String title, String author, String publisher, LocalDate publishedDate,
             LocalDate registrationDate) {
@@ -22,6 +23,7 @@ public class Book {
         this.publisher = publisher;
         this.publishedDate = publishedDate;
         this.registrationDate = registrationDate;
+        this.isBorrowed = isBorrowed;
     }
     
     public int getId() {

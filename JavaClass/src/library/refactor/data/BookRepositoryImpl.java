@@ -9,8 +9,6 @@ public class BookRepositoryImpl implements BookRepository{
     private List<Book> books = new ArrayList<>();
     
     
-    
-    
     public BookRepositoryImpl() {
     }
 
@@ -21,14 +19,31 @@ public class BookRepositoryImpl implements BookRepository{
 
     @Override
     public void showBookList(Book book) {
-        // TODO Auto-generated method stub
         
     }
 
     @Override
     public void addBook(Book book) {
-        // TODO Auto-generated method stub
+        int index = -1;
+        for (int i = 0; i < books.size(); i++) {
+            Book e = books.get(i);
+            if (e.getId() == book.getId()) {
+                index = i;
+                break;
+            }
+        }
         
+        if (index == -1) {
+            books.add(book);
+            if (data != null) {
+                data.save(books);
+            }
+        } else {
+            books.set(index, book);
+            if (data != null) {
+                data.save(books);
+            }
+        }
     }
 
     @Override
