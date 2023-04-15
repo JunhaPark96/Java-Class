@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="findAll"/>
+		<item key="selection" value="getDue"/>
 		<list key="findhistory">
+			<item value="getdue"/>
+			<item value="dueDate"/>
 			<item value="findall"/>
 			<item value="Hash"/>
 			<item value="money"/>

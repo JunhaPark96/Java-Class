@@ -27,5 +27,34 @@ public class BookRepositoryImplTest {
         repository.addBook(book4);
         assertEquals(4, repository.findAll().size());
     }
+    
+    @Test
+    public void 도서대출기능테스트() {
+        repository.addBook(book1);
+        repository.addBook(book2);
+        repository.addBook(book3);
+        repository.addBook(book4);
+        
+        assertEquals(false, book1.isBorrowed());
+        repository.borrowBook(book1);
+        assertEquals(true, book1.isBorrowed());
+        
+        assertEquals(false, book2.isBorrowed());
+        repository.borrowBook(book2);
+        assertEquals(true, book2.isBorrowed());
+        
+        assertEquals(false, book3.isBorrowed());
+    }
+    
+    @Test
+    public void 연장기능테스트() {
+        repository.addBook(book1);
+        repository.addBook(book2);
+        
+        assertEquals(false, book1.isExtended());
+        repository.borrowBook(book1);
+        repository.dueDateExtend(book1);
+        assertEquals(true, book1.isExtended());
+    }
 
 }

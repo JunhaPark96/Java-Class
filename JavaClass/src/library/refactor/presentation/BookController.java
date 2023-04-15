@@ -109,6 +109,4 @@ public class BookController {
         System.out.println("대출하려는 도서 ID를 입력해주세요");
         return scanner.nextInt();
     }
-    
-    
 }

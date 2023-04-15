@@ -81,7 +81,6 @@ public class BookRepositoryImpl implements BookRepository{
             }
         }
         return null;
-        
     }
     
     @Override
@@ -93,7 +92,6 @@ public class BookRepositoryImpl implements BookRepository{
         }
         return null;
     }
-    
 
     @Override
     public List<Book> findAll() {
@@ -105,6 +103,4 @@ public class BookRepositoryImpl implements BookRepository{
         // TODO Auto-generated method stub
         return 0;
     }
-
-    
 }
