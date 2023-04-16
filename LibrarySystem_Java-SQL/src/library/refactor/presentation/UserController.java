@@ -49,9 +49,11 @@ public class UserController {
             Connection conn = jdbc.getConnection(); // jdbc연결 가져오기
             Statement stmt = conn.createStatement();
 //            ResultSet rs = stmt.executeQuery("select * from libuser");
+            // age는 현재날짜와 생일을 기준으로 계산
             ResultSet rs = stmt.executeQuery("select id, name, "
                     + "extract(year from sysdate) - extract(year from birthDate) + 1 as age, "
-                    + "address, contact, birthDate, joinDate from libuser");
+                    + "address, contact, birthDate, joinDate from libuser order by id");
+            System.out.println("유저ID 이름 나이 주소 전화번호 생일 가입일자");
             while (rs.next()) {
                 String id = rs.getString(1);
                 String name = rs.getString(2);
@@ -71,30 +73,6 @@ public class UserController {
             // connection 종료 안함
         }
 
-//        try {
-//            Connection conn = jdbc.getConnection();
-//            String sql = "select * from libuser order by id";
-//            PreparedStatement pstmt = conn.prepareStatement(sql);
-//            ResultSet rs = pstmt.executeQuery();
-//
-//            while (rs.next()) {
-//                String id = rs.getString(1);
-//                String name = rs.getString(2);
-//                int age = rs.getInt(3);
-//                String address = rs.getString(4);
-//                String contact = rs.getString(5);
-//                Date birthDate = rs.getDate(6);
-//                Date joinDate = rs.getDate(7);
-//                System.out.println(id + " " + name + " " + age + " " 
-//                + address + " " + contact + " " + birthDate + " " + joinDate);
-//            }
-//            pstmt.close();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } finally {
-//            // connection 종료 안함
-//        }
-
     }
 
     public void addUser() {
@@ -112,7 +90,7 @@ public class UserController {
           String birthDate = scanner.next();
           
           String sql = String.format("insert into libuser(id, name, address, contact, birthDate) "
-                  + "values(to_char(libuser_seq.nextval, '00000000'), '%s', '%s', '%s', to_date('%s', 'rr/mm/dd'))",
+                  + "values(trim(to_char(libuser_seq.nextval, '00000000')), '%s', '%s', '%s', to_date('%s', 'rr/mm/dd'))",
                   name, address, contact, birthDate);
          
           Statement stmt = conn.createStatement();
@@ -216,26 +194,7 @@ public class UserController {
         } finally {
             // connection 종료 안함
         }
-        
-         //statement
-//        try {
-//            Connection conn = jdbc.getConnection();
-//            conn.setAutoCommit(false);
-//            System.out.println("몇번 id를 삭제하시겠어요?");
-//            String deleteTarget = scanner.next();
-//
-//            Statement stmt = conn.createStatement();
-//            String sql = "DELETE FROM libuser WHERE id=\'" + deleteTarget + "\'";
-//            int result = stmt.executeUpdate(sql);
-//            System.out.println(result + "개가 삭제되었습니다");
-//            
-//            conn.commit();
-//            stmt.close();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } finally {
-//            // connection 종료 안함
-//        }
+
     }
 
 

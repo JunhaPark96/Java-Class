@@ -36,12 +36,13 @@ public class BookController {
     }
 
     public void showBookList() {
+        System.out.println("책ID isbn 책이름 작가 출판사 출판일 등록일 대출상태");
         try {
             Connection conn = jdbc.getConnection();
             String sql = "select * from book order by publishedDate desc";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery();
-
+            
             while (rs.next()) {
                 String id = rs.getString(1);
                 String isbn = rs.getString(2);
@@ -143,14 +144,4 @@ public class BookController {
         }
     }
 
-    
-    public String bookTitle() {
-        System.out.println("대출하려는 도서 제목을 입력해주세요");
-        return scanner.next();
-    }
-    
-    public int bookId() {
-        System.out.println("대출하려는 도서 ID를 입력해주세요");
-        return scanner.nextInt();
-    }
 }

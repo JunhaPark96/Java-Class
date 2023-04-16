@@ -1,8 +1,9 @@
 package library.refactor.connection;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.io.*;
+import java.nio.charset.*;
+import java.nio.file.*;
+import java.sql.*;
 
 public class JDBC {
     
@@ -60,6 +61,43 @@ public class JDBC {
         }
     }
     
+//    public void loadScript(String filePath) {
+//        try (Statement stmt = conn.createStatement()) {
+//            String sql = Files.readString(Paths.get(filePath), Charset.forName("UTF-8"));
+//            stmt.executeUpdate(query);
+//            stmt.execute(sql);
+//        } catch (IOException | SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//    public void loadScript(String fileName) {
+//        try {
+//            String query = Files.readString(Paths.get(fileName), Charset.forName("UTF-8"));
+//            Statement stmt = conn.createStatement();
+//            stmt.executeUpdate(query);
+//            stmt.close();
+//        } catch (IOException | SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
+    public void loadScript(String filePath) {
+        try {
+            StringBuilder sb = new StringBuilder();
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), Charset.forName("UTF-8")));
+            String line;
+            while ((line = br.readLine()) != null) {
+                sb.append(line).append("\n");
+            }
+            String query = sb.toString();
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(query);
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 }
 
 //    public Connection getConnection() throws ClassNotFoundException, SQLException {

@@ -1,5 +1,6 @@
 package library.refactor;
 
+import java.io.*;
 import java.sql.*;
 import java.util.*;
 import library.refactor.connection.*;
@@ -11,7 +12,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         JDBC jdbc = JDBC.getInstance();
-        
+//        jdbc.loadScript("C:\\Users\\JUNHA\\userDB.sql");
+//        jdbc.
+//        jdbc.loadScript("C:\\Users\\JUNHA\\execution.sql");
+
         UserController userController = new UserController(
                 new UserRepositoryImpl());
         
@@ -40,5 +44,7 @@ public class Main {
             }
         }
     }
-
 }
+
+
+
